@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    android:layout_height="match_parent"
+    tools:context="com.example.rico.mamo.ui.widget.AddFromWidgetActivity">
+
+    <TextView
+        android:text="FORM WIDGET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <AutoCompleteTextView
+        android:hint="Chart Name"
+        android:id="@+id/add_widget_chart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </AutoCompleteTextView>
+
+    <AutoCompleteTextView
+        android:hint="Item Name"
+        android:id="@+id/add_widget_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </AutoCompleteTextView>
+
+    <EditText
+        android:id="@+id/add_widget_price"
+        android:hint="price"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Switch
+        android:id="@+id/dynamic_widget"
+        android:hint="Dynamic Quantity?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/add_widget_quantity"
+        android:hint="quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/add_widget_description"
+        android:hint="description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/add_widget_submit"
+        android:text="SUBMIT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

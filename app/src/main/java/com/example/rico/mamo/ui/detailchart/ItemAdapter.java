@@ -28,6 +28,8 @@ import com.example.rico.mamo.ui.Helper.EditNumberDialog;
 import com.example.rico.mamo.ui.Helper.OnDone;
 import com.example.rico.mamo.ui.additem.AddItemActivity;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Properties;
@@ -150,8 +152,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder> 
                                         daoSession.getItemDao().update(item);
 
                                         LogActivity logActivity = new LogActivity();
-                                        logActivity.setDate(new Date());
-                                        logActivity.setDescription("Bought "+res+" "+item.getName()+" cost"+(res*item.getPrice()));
+                                        logActivity.setDate(Calendar.getInstance().getTime());
+                                        logActivity.setDescription("Bought\t"+res+" "+item.getName()+"\tCost\t"+(res*item.getPrice()));
                                         logActivity.setId_item(item.getId_item());
                                         daoSession.getLogActivityDao().insert(logActivity);
 

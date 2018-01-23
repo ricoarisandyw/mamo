@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.InputType;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,13 +18,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.rico.mamo.R;
+import com.example.rico.mamo.ui.debt.DebtActivity;
+import com.example.rico.mamo.ui.statistic.StatisticActivity;
 import com.example.rico.mamo.data.db.App;
 import com.example.rico.mamo.data.db.model.Account;
 import com.example.rico.mamo.data.db.model.Chart;
 import com.example.rico.mamo.data.db.model.DaoSession;
 import com.example.rico.mamo.data.db.model.Item;
 import com.example.rico.mamo.ui.Helper.EditNumberDialog;
-import com.example.rico.mamo.ui.Helper.EditTextDialog;
 import com.example.rico.mamo.ui.Helper.OnDone;
 import com.example.rico.mamo.ui.addchart.AddChartActivity;
 
@@ -152,9 +152,10 @@ public class DashboardActivity extends AppCompatActivity
         } else if (id == R.id.edit_account) {
 
         } else if (id == R.id.statistic) {
-
-        } else if (id == R.id.nav_manage) {
-
+            startActivity(new Intent(this, StatisticActivity.class));
+        } else if (id == R.id.nav_debt) {
+            finish();
+            startActivity(new Intent(this, DebtActivity.class));
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
